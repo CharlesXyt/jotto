@@ -1,9 +1,11 @@
 import checkPropTypes from 'check-prop-types'
-import {createStore} from 'redux'
+import {createStore,applyMiddleware, compose} from 'redux'
 import rootReducer from '../src/component/store/reducer/jottoReducer'
+import thunk from 'redux-thunk'
 
 export const storeFactory = (initialState) =>{
-    return createStore(rootReducer,initialState)
+    
+    return createStore(rootReducer,initialState,compose(applyMiddleware(thunk)))
 }
 
 
