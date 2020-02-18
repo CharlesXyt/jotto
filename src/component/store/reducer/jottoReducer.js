@@ -2,7 +2,10 @@ import * as actionTypes from '../action/actionTypes'
 
 
 const initialState = {
-    success:false
+    success:false,
+    secretWord:null,
+    guessedWords:[]
+
 }
 
 const reducer = (state=initialState,actions) => {
