@@ -2,7 +2,7 @@ import * as actionTypes from '../action/actionTypes'
 import jottoReducer from './jottoReducer'
 
 test('returns default initial state of false when no action is passes',() => {
-    const newState = jottoReducer(undefined,{type:undefined})
+    const newState = jottoReducer(undefined,{})
     expect(newState.success).toBe(false)
 })
 
